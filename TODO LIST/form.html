@@ -1,0 +1,47 @@
+<center>
+<label>Name</label>
+<input id="name"><br><br>
+<label>Age</label>
+<input id="age"><br><br>
+<label>Gender</label>
+<input type="radio"  id="gender">Male
+<input type="radio"  id="gender">Female<br><br>
+<label>Course</label>
+<input id="course"><br><br>
+<label>Email</label>
+<input type="email" id="email"><br><br>
+<button onclick="al()">Save</button>
+<h4 id="o"></h4>
+<h1 id="oo"></h1>
+<h1 id="ooo"></h1>
+<h1 id="oooo"></h1>
+<h1 id="ooooo"></h1>
+<!-- <input type="submit" id="su" placeholder="Submit" onclick="al()" style="background-color: aqua; width: 300px;"></center> -->
+
+<script>
+    var a=document.getElementById("name")
+    var b=document.getElementById("age")
+    var c=document.getElementById("gender")
+    var d=document.getElementById("course")
+    var e=document.getElementById("email")
+    var f=document.getElementById("email")
+    var g=document.getElementById("su")
+    var o=document.getElementById("o")
+    var oo=document.getElementById("oo")
+    var ooo=document.getElementById("ooo")
+    var oooo=document.getElementById("oooo")
+    var ooooo=document.getElementById("ooooo")
+
+
+    function al(){
+    
+       o.textContent=a.value
+        oo.textContent=b.value
+        ooo.textContent=c.value
+        oooo.textContent=d.value
+        ooooo.innerHTML=e.value+"<button onclick='okk(event)'>Delete</button>"
+    }
+    function okk(event){
+event.target.parentElement.remove()
+    }
+</script>

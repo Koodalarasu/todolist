@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+<div>
+    <input id="num1" placeholder="Add a new task...">
+    <button id="btn" onclick="add()">Add</button>
+    <ol id="list">
+    </ol>
+</div>
+
+<script>
+    var ul = document.getElementById("list");
+    var num1 = document.getElementById("num1");
+
+    function add() {
+        var a = document.createElement("li");
+        a.innerHTML = num1.value + " <button onclick='del(event)'>Delete</button>";
+        ul.append(a);
+        num1.value = "";  
+    }
+
+    function del(event) {
+        event.target.parentElement.remove();
+    }
+</script>
+</body>
+</html>
